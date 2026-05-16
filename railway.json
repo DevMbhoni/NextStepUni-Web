@@ -1,0 +1,11 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "dotnet publish NextStepUni.API/NextStepUni.API.csproj -c Release -o /app"
+  },
+  "deploy": {
+    "startCommand": "dotnet /app/NextStepUni.API.dll",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
