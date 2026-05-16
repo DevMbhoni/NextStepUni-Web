@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
@@ -9,3 +10,16 @@
     "restartPolicyType": "ON_FAILURE"
   }
 }
+=======
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "dotnet publish NextStepUni.API/NextStepUni.API.csproj -c Release -o /app"
+  },
+  "deploy": {
+    "startCommand": "dotnet /app/NextStepUni.API.dll",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
+>>>>>>> fc787320987f953d0f5141a870d25ab7c15b2616
