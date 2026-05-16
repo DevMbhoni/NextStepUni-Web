@@ -4,6 +4,7 @@ using NextStepUni.Application.Interfaces;
 using NextStepUni.Infrastructure.Services;
 using Microsoft.IdentityModel.Tokens;
 using NextStepUni.Infrastructure.Data;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 using System.Text;
 
 
@@ -15,8 +16,8 @@ namespace NextStepUni.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<AppDbContext>(options => 
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IUniversityService, UniversityService>();
