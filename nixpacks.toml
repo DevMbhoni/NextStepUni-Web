@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["dotnet-sdk_8"]
+
+[phases.build]
+cmds = [
+  "dotnet publish NextStepUni.API/NextStepUni.API.csproj -c Release -o /app"
+]
+
+[start]
+cmd = "dotnet /app/NextStepUni.API.dll"

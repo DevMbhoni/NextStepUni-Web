@@ -32,7 +32,7 @@ namespace NextStepUni.Application.DTOs
         public string? LogoUrl { get; set; }
         public decimal? AnnualFeesFrom { get; set; }
         public bool IsFavourited { get; set; }
-        public List<FacultyDto> Faculties { get; set; } = [];
+        public List<FacultyDto> Faculties { get; set; } = new();
     }
 
     public class FacultyDto
@@ -40,7 +40,7 @@ namespace NextStepUni.Application.DTOs
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
-        public List<QualificationDto> Qualifications { get; set; } = [];
+        public List<QualificationDto> Qualifications { get; set; } = new List<QualificationDto>();
     }
 
     public class QualificationDto
@@ -52,7 +52,7 @@ namespace NextStepUni.Application.DTOs
         public string? Description { get; set; }
         public int? MinimumAps { get; set; }
         public string? ApplicationLink { get; set; }
-        public List<SubjectRequirementDto> SubjectRequirements { get; set; } = [];
+        public List<SubjectRequirementDto> SubjectRequirements { get; set; } = new List<SubjectRequirementDto>();
     }
 
     public class SubjectRequirementDto
