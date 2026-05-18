@@ -1,3 +1,4 @@
+
 # Visual Studio
 .vs/
 bin/
@@ -10,6 +11,8 @@ obj/
 # Sensitive config — NEVER commit these
 **/appsettings.json
 **/appsettings.*.json
+nextstepuni-frontend/.vite/
+nextstepuni-frontend/node_modules/
 
 # Keep the template so others know what fields exist
 !**/appsettings.example.json
